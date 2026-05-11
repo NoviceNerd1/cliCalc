@@ -1,37 +1,71 @@
-HELP.md
-.gradle
+# =========================
+# BUILD OUTPUTS
+# =========================
 build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+out/
+target/
 
-### STS ###
-.apt_generated
+# Allow wrapper JAR
+!gradle/wrapper/gradle-wrapper.jar
+
+# =========================
+# GRADLE
+# =========================
+.gradle/
+gradle-app.setting
+
+# =========================
+# JAVA
+# =========================
+*.class
+
+# =========================
+# IDEs
+# =========================
+
+## IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+## Eclipse / STS
 .classpath
-.factorypath
 .project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+## VS Code
+.vscode/
 
-### NetBeans ###
+## NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
-.vscode/
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# LOGS
+# =========================
+*.log
+logs/
+
+# =========================
+# LOCAL / SECRETS
+# =========================
+application.local.conf
+.secrets/
+
+# =========================
+# NATIVE BUILD (GraalVM)
+# =========================
+native-image-output/
